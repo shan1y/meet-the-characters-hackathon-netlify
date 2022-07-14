@@ -8,11 +8,16 @@ export default function Intro({ seriesList, selectSeries }) {
       <h1>Series</h1>
       <div className="container">
         {seriesList.map((item) => (
-          <div onClick={() => selectSeries(item.id)} key={item.id}>
-            <div className="series-item">
-              <p className="series-item-title">{item.title}</p>
-              <img className="series-item-image" src={item.img} alt="" />
-            </div>
+          <div
+            //  onClick={() => selectSeries(item.id)}
+            key={item.id}
+          >
+            <Link to={`/series/${item.id}`}>
+              <div className="series-item">
+                <p className="series-item-title">{item.title}</p>
+                <img className="series-item-image" src={item.img} alt="" />
+              </div>
+            </Link>
           </div>
         ))}
       </div>
