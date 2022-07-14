@@ -1,0 +1,51 @@
+@use "../../styles/colors" as *;
+
+.character-heading {
+  margin-block: 1rem;
+}
+
+.container-character {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-left-character {
+  order: 2;
+}
+
+.character-description {
+  @media (min-width: 700px) {
+    max-width: 400px;
+  }
+}
+
+.character {
+  border-bottom: 1px solid $cyan;
+  &-description {
+    font-size: 12px;
+    margin: 1rem 0;
+  }
+  &-image {
+    margin: 0.5rem;
+    height: 12.5rem;
+    width: 12.5rem;
+    border-radius: 5px;
+    object-fit: cover;
+    object-position: 50% 10%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  &-actor {
+    color: $cyan;
+  }
+
+  &__serie-description {
+    padding-block: 1rem;
+    margin-inline: auto;
+    @media (min-width: 700px) {
+      max-width: 500px;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@use "../../styles/colors.scss" as *;
+
+.left-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.right-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  &__image {
+    width: auto;
+    height: 40vh;
+    border-radius: 10px;
+  }
+}
+
+h1 {
+  color: $darkViolet;
+}
+
+.content {
+  &__paragraph {
+    padding-bottom: 1rem;
+  }
+  &__button {
+    background-color: turquoise;
+    border-style: none;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+}
