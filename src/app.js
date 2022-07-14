@@ -17,7 +17,6 @@ function App() {
         <div className="sections">
           <Route path="/" exact component={MainContent} />
           <Route path="/series/:id" component={MainCharacter} />
-          {/* <Route path="/series/:id" render={(routerProps)=>{console.log(routerProps)}}/> */}
         </div>
       </div>
     </BrowserRouter>
