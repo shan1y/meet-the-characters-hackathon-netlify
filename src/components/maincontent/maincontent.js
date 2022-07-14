@@ -26,9 +26,7 @@ class MainContent extends Component {
   };
 
   selectSeries = (serieID) => {
-    console.log(
       (window.location.href = `https://meet-the-characters-hackathon.netlify.app/series/${serieID}`)
-    );
   };
 
   render() {
