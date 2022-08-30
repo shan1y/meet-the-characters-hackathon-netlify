@@ -14,7 +14,6 @@ function Header({ menuOpen, setMenuOpen }) {
           </div>
           <div className="itemContainer">
             <div className="icon" />
-            <span></span>
           </div>
         </div>
         <div className="right">

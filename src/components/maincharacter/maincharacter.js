@@ -29,7 +29,7 @@ class MainCharacter extends React.Component {
         {this.state.characters && (
           <div>
             <h1 className="character-heading">Main Characters</h1>
-            <p>Meet the main characters of {this.state.characters.title}</p>
+            <p className="character-heading__subtitle">Meet the main characters of {this.state.characters.title}</p>
             <p className="character__serie-description">
               {this.state.characters.description}
             </p>

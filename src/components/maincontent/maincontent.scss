@@ -40,5 +40,8 @@ h1 {
     font-size: 18px;
     margin-top: 1rem;
     cursor: pointer;
+    &:hover{
+      background-color:rgb(42, 149, 138);
+    }
   }
 }

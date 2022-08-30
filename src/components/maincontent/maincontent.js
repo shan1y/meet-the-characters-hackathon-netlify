@@ -8,9 +8,11 @@ class MainContent extends Component {
   state = {
     isSeriesVisible: false,
     seriesList: [],
+    isLoading:false
   };
 
   seriesData = () => {
+    this.setState({isLoading:true})
     axios
       .get("https://characters-hackathon-server.herokuapp.com/series")
       .then((response) => {
@@ -21,6 +23,7 @@ class MainContent extends Component {
         this.setState({
           seriesList: seriesData,
           isSeriesVisible: true,
+          isLoading:false
         });
       });
   };
@@ -30,6 +33,7 @@ class MainContent extends Component {
   };
 
   render() {
+
     return (
       <div>
         <div className="content">
@@ -47,6 +51,9 @@ class MainContent extends Component {
             <img className="right-container__image" src={myImage} />
           </div>
         </div>
+        {this.state.isLoading && !this.state.isSeriesVisible? (
+          <p>...loading</p>
+        ):null}
         {this.state.isSeriesVisible ? (
           <Intro
             seriesList={this.state.seriesList}
